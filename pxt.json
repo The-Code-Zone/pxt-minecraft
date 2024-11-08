@@ -1,0 +1,22 @@
+{
+    "name": "The Code Zone",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "extensions": "github:The-Code-Zone/pxt-mc-extensions"
+    },
+    "files": [
+      "netherportal/a.md",
+      "netherportal/b.md",
+      "netherportal/c.md",
+      "enderportal/a.md",
+      "enderportal/b.md",
+      "enderportal/c.md",
+      "randomiser/a.md",
+      "randomiser/b.md",
+      "randomiser/c.md"
+    ],
+    "testFiles": [],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
