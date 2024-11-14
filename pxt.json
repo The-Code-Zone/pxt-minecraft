@@ -3,7 +3,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "extensions": "github:The/code/Zone/pxt/mc/extensions"
+        "extensions": "github:The-Code-Zone/pxt-mc-extensions"
     },
     "files": [
         "OP/agentfollow/a.md",
