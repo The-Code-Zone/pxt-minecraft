@@ -1,10 +1,12 @@
 ### @explicitHints true
 
-# Ender Portal
+# End Portal
 
-## Build this
+## Try it!
 
-```blocks
+Say **s** in the chat to build the ender portal.
+
+```template
 player.onChat("p", function () {
     positions2.save(world(20, 80, 87))
     shapes.line(
@@ -35,11 +37,3 @@ player.onChat("p", function () {
     )
 })
 ```
-
-```template
-{}
-```
-
-## Try it!
-
-Say **s** in the chat to build the ender portal.

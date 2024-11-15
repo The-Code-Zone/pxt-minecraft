@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Ender Portal
+# End Portal
 
 ```template
 player.onChat("p", function () {

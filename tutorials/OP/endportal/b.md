@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Ender Portal
+# End Portal
 
 ## Complete this code
 

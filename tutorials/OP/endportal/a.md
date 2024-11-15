@@ -1,7 +1,7 @@
 ### @explicitHints true
 ### @diffs true
 
-# Ender Portal
+# End Portal
 
 ## Step 1
 
