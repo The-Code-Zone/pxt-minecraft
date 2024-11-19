@@ -212,8 +212,8 @@
           "name": "Nether Portal",
           "ids": [
             "OP/netherportal/a",
-            "OP/netherportal/a",
-            "OP/netherportal/a"
+            "OP/netherportal/b",
+            "OP/netherportal/c"
           ],
           "image": "blocks/portal_placeholder"
         },
@@ -221,8 +221,8 @@
           "name": "End Portal",
           "ids": [
             "OP/endportal/a",
-            "OP/endportal/a",
-            "OP/endportal/a"
+            "OP/endportal/b",
+            "OP/endportal/c"
           ],
           "image": "items/ender_eye"
         }
