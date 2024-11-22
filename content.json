@@ -98,13 +98,13 @@
           "image": "ui/icon_agent"
         },
         {
-          "name": "Infinite Scaffold",
+          "name": "Infini-Scaffold",
           "ids": [
             "OP/scaffold/a",
             "OP/scaffold/b",
             "OP/scaffold/c"
           ],
-          "image": "blocks/scaffolding_side"
+          "image": "blocks/scaffolding_top"
         },
         {
           "name": "Iron Golem",
