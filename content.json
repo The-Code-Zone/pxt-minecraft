@@ -89,14 +89,6 @@
           "image": "items/trident"
         },
         {
-          "name": "Creeper Deterrent",
-          "ids": [
-            "OP/creepercat/a",
-            "OP/creepercat/b",
-            "OP/creepercat/c"
-          ]
-        },
-        {
           "name": "Agent Bodyguard",
           "ids": [
             "OP/bodyguard/a",
