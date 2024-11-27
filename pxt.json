@@ -11,6 +11,7 @@
         "populator/content.ts",
         "populator/json.ts",
         "populator/message.md",
+        "tutorials/blank.md",
         "tutorials/OP/agentfollow/a.md",
         "tutorials/OP/agentfollow/b.md",
         "tutorials/OP/agentfollow/c.md",

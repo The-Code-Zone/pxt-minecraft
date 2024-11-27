@@ -4,6 +4,13 @@
       "name": "Starter Codes",
       "tutorials": [
         {
+          "name": "New Project",
+          "ids": [
+            "blank"
+          ],
+          "image":  "ui/anvil-plus"
+        },
+        {
           "name": "Panda Panic",
           "ids": [
             "OP/panda/a",
@@ -22,30 +29,20 @@
           "image": "blocks/flower_dandelion"
         },
         {
+          "name": "Agent Follow",
+          "ids": [
+            "OP/agentfollow/a",
+            "OP/agentfollow/b",
+            "OP/agentfollow/c"
+          ]
+        },
+        {
           "name": "Change Gamemode",
           "ids": [
             "OP/gamemode/a",
             "OP/gamemode/b",
             "OP/gamemode/c"
           ]
-        },
-        {
-          "name": "Always Daytime",
-          "ids": [
-            "OP/daytime/a",
-            "OP/daytime/b",
-            "OP/daytime/c"
-          ],
-          "image": "items/clock_item"
-        },
-        {
-          "name": "Weather Change",
-          "ids": [
-            "OP/weather/a",
-            "OP/weather/b",
-            "OP/weather/c"
-          ],
-          "image": "items/bucket_water"
         }
       ]
     },
@@ -150,6 +147,24 @@
             "OP/diamondhunt/c"
           ],
           "image": "items/diamond"
+        },
+        {
+          "name": "Weather Change",
+          "ids": [
+            "OP/weather/a",
+            "OP/weather/b",
+            "OP/weather/c"
+          ],
+          "image": "items/bucket_water"
+        },
+        {
+          "name": "Always Daytime",
+          "ids": [
+            "OP/daytime/a",
+            "OP/daytime/b",
+            "OP/daytime/c"
+          ],
+          "image": "items/clock_item"
         }
       ]
     },
