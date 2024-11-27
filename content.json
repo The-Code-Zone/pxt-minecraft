@@ -34,7 +34,8 @@
             "OP/agentfollow/a",
             "OP/agentfollow/b",
             "OP/agentfollow/c"
-          ]
+          ],
+          "image": "ui/icon_agent"
         },
         {
           "name": "Change Gamemode",
