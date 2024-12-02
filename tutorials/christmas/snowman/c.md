@@ -8,7 +8,7 @@ Type **snowman** to spawn a Snowman.
 
 ```template
 player.onChat("snowman", function () {
-    positions2.save(poscamera(0, 0, 2))
+    positions2.save(posCamera(0, 0, 2))
     blocks.fill(
     SNOW,
     positions2.load(0, 0, 0),

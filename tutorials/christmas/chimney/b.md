@@ -6,7 +6,7 @@
 
 ```template
 player.onChat("chimney", function () {
-    positions2.save(positions.groundPosition(poscamera(0, 2, 5)))
+    positions2.save(positions.groundPosition(posCamera(0, 2, 5)))
     blocks.fill(
     COBBLESTONE,
     positions2.load(-1, -1, -1),
@@ -28,7 +28,7 @@ Complete the code
 
 ```blocks
 player.onChat("chimney", function () {
-    positions2.save(positions.groundPosition(poscamera(0, 2, 5)))
+    positions2.save(positions.groundPosition(posCamera(0, 2, 5)))
     blocks.fill(
     COBBLESTONE,
     positions2.load(-1, -1, -1),

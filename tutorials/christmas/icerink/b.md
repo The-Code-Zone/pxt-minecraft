@@ -10,7 +10,7 @@ Complete the code
 
 ```blocks
 player.onChat("iceskating", function () {
-    positions2.save(poscamera(0, 0, 12))
+    positions2.save(posCamera(0, 0, 12))
     blocks.fill(
     TINTED_GLASS,
     positions2.load(-10, -1, -10),
@@ -35,7 +35,7 @@ player.onChat("iceskating", function () {
 
 ```template
 player.onChat("iceskating", function () {
-    positions2.save(poscamera(0, 0, 12))
+    positions2.save(posCamera(0, 0, 12))
     blocks.fill(
     TINTED_GLASS,
     positions2.load(-10, -1, -10),
