@@ -54,4 +54,4 @@ player.onChat("dinner", function () {
 
 ## Try it!
 
-Type **dinner** to build the kitchen. Put some coal in the furnaces to cook the chicken, potatoes and carrots.
+Type **dinner** to build the kitchen. Put some coal in the furnaces to cook the chicken and potatoes.
