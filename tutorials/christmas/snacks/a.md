@@ -14,7 +14,7 @@ Build this
 
 ```blocks
 player.onChat("snacks", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 4)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 4)))
 })
 ```
 
@@ -24,7 +24,7 @@ Build this
 
 ```blocks
 player.onChat("snacks", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 4)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 4)))
     blocks.fill(
     GLASS,
     positions2.load(-1, 2, -1),
@@ -48,7 +48,7 @@ Build this
 
 ```blocks
 player.onChat("snacks", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 4)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 4)))
     blocks.fill(
     GLASS,
     positions2.load(-1, 2, -1),

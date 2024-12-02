@@ -6,7 +6,7 @@
 
 ```template
 player.onChat("tree", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 10)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 10)))
     y = 3
     size = 6
     while (size > 0) {

@@ -10,7 +10,7 @@ Build this
 
 ```blocks
 player.onChat("candycane", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 2)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 2)))
 })
 ```
 
@@ -24,7 +24,7 @@ Build this (Hint: Don't forget you can duplicate by right clicking a block)
 
 ```blocks
 player.onChat("candycane", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 2)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 2)))
     blocks.place(RED_CONCRETE, positions2.load(0, 0, 0))
     blocks.place(WHITE_CONCRETE, positions2.load(0, 1, 0))
     blocks.place(RED_CONCRETE, positions2.load(0, 2, 0))
@@ -39,7 +39,7 @@ Build this
 
 ```blocks
 player.onChat("candycane", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 2)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 2)))
     blocks.place(RED_CONCRETE, positions2.load(0, 0, 0))
     blocks.place(WHITE_CONCRETE, positions2.load(0, 1, 0))
     blocks.place(RED_CONCRETE, positions2.load(0, 2, 0))

@@ -8,7 +8,7 @@ Type **candycane** to spawn a giant candycane.
 
 ```template
 player.onChat("candycane", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 0, 2)))
+    positions2.save(positions.groundPosition(poscamera(0, 2, 2)))
     blocks.place(RED_CONCRETE, positions2.load(0, 0, 0))
     blocks.place(WHITE_CONCRETE, positions2.load(0, 1, 0))
     blocks.place(RED_CONCRETE, positions2.load(0, 2, 0))
