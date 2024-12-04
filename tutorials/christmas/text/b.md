@@ -9,7 +9,7 @@ player.onChat("xmas", function () {
     positions2.save(posCamera(-14, 0, 12))
     blocks.print(
     "MERRY",
-    RED_CONCRETE,
+    SHROOMLIGHT,
     positions2.load(0, 6, 0),
     WEST
     )
@@ -25,13 +25,13 @@ player.onChat("xmas", function () {
     positions2.save(posCamera(-14, 0, 12))
     blocks.print(
     "MERRY",
-    RED_CONCRETE,
+    SHROOMLIGHT,
     positions2.load(0, 6, 0),
     WEST
     )
     blocks.print(
     "CHRISTMAS",
-    GREEN_CONCRETE,
+    VERDANT_FROGLIGHT,
     positions2.load(11, 0, 0),
     WEST
     )

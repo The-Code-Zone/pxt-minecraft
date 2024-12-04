@@ -6,7 +6,7 @@
 
 ```template
 player.onChat("xmas", function () {
-    positions2.save(posCamera(-14, 0, 12))
+    positions2.save(world(-133, 75, -630))
     blocks.print(
     "MERRY",
     SHROOMLIGHT,

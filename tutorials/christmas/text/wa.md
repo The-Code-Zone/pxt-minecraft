@@ -5,8 +5,26 @@
 # Christmas Greeting
 
 ```template
+{}
+```
+
+## Step 1
+
+Build this
+
+```blocks
 player.onChat("xmas", function () {
-    positions2.save(posCamera(-14, 0, 12))
+    positions2.save(world(-133, 75, -630))
+})
+```
+
+## Step 2
+
+Build this
+
+```blocks
+player.onChat("xmas", function () {
+    positions2.save(world(-133, 75, -630))
     blocks.print(
     "MERRY",
     SHROOMLIGHT,
