@@ -2,6 +2,10 @@
 
 # Snowman
 
+```package
+events=github:microsoft/makecode-minecraft-mob-events
+```
+
 ## Try it!
 
 Type **snowman** to spawn a Snowman.
@@ -16,5 +20,6 @@ player.onChat("snowman", function () {
     FillOperation.Replace
     )
     blocks.place(CARVED_PUMPKIN, positions2.load(0, 2, 0))
+    mobEvents.executeSnowGolemCommand(mobEvents.createSelector(), mobEvents.SnowGolem.RemovePumpkinHead)
 })
 ```

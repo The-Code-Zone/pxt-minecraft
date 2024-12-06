@@ -4,6 +4,10 @@
 
 # Snowman
 
+```package
+events=github:microsoft/makecode-minecraft-mob-events
+```
+
 ## Step 1
 
 Build this
@@ -48,6 +52,7 @@ player.onChat("snowman", function () {
     FillOperation.Replace
     )
     blocks.place(CARVED_PUMPKIN, positions2.load(0, 2, 0))
+    mobEvents.executeSnowGolemCommand(mobEvents.createSelector(), mobEvents.SnowGolem.RemovePumpkinHead)
 })
 ```
 
