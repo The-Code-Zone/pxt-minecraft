@@ -6,7 +6,13 @@
 
 ```template
 player.onChat("reindeer", function () {
-    riding = !(riding)
+    if (riding) {
+        riding = false
+        player.teleport(positions2.load(0, 0, 0))
+    } else {
+        positions2.save(posCamera(0, 0, 0))
+        riding = true
+    }
 })
 let riding = false
 riding = false
@@ -32,3 +38,4 @@ loops.forever(function () {
 ## Try it!
 
 Type **reindeer** to go for a ride with your agent.
+Type **reindeer** again to stop.

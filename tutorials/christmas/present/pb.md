@@ -6,7 +6,7 @@
 
 ```template
 player.onChat("present", function () {
-    positions2.save(positions.groundPosition(posCamera(0, 2, 10)))
+    positions2.save(positions.groundPosition(posCamera(0, 2, 4)))
     choose_colours()
     blocks.fill(
     colour_1,
