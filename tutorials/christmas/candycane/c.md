@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Candycane
+# Giant Candycanes
 
 ## Try it!
 

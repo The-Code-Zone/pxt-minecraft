@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Agent Reindeer
+# Ride a Reindeer
 
 ```template
 player.onChat("reindeer", function () {

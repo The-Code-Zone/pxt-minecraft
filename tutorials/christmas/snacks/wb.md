@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Christmas Snacks
+# Festive Snacks
 
 ```template
 player.onChat("snacks", function () {

@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Ice Rink
+# Ice Skating
 
 ```template
 player.onChat("iceskating", function () {

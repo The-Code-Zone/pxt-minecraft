@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Snowman
+# Build a Snowman
 
 ```package
 events=github:microsoft/makecode-minecraft-mob-events

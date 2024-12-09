@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Snowing
+# Make It Snow
 
 ## Try it!
 

@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Chimney
+# Fix the Chimney
 
 ```template
 {}

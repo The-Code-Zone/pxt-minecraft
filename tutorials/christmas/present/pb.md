@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Exploding Present
+# BONUS Present
 
 ```template
 player.onChat("present", function () {

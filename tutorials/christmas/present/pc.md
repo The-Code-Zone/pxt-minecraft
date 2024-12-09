@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# Exploding Present
+# BONUS Present
 
 ```template
 let colours: number[] = []
