@@ -1,6 +1,5 @@
 let _saved_position = positions.create(0, 0, 0)
 
-//% block="Saved Positions" weight=55 color=#965975 icon="\uf0c7"
 namespace positions {
 
     //% block weight=100
