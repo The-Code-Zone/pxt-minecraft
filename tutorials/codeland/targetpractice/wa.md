@@ -48,7 +48,7 @@ function back_wall () {
 }
 ```
 
-Build this ``||functions:function||``.
+Build this ``||functions:script||``.
 
 ## Step 2
 
@@ -81,7 +81,7 @@ function range () {
 }
 ```
 
-Build this ``||functions:function||``.
+Build this ``||functions:script||``.
 
 ## Step 3
 
@@ -100,7 +100,7 @@ function give_bow () {
 }
 ```
 
-Build this ``||functions:function||``.
+Build this ``||functions:script||``.
 
 ## Step 4
 
@@ -124,7 +124,7 @@ function spawn_target (pos2: Position) {
 }
 ```
 
-Build this ``||functions:function||``.
+Build this ``||functions:script||``.
 
 ## Step 5
 
@@ -144,7 +144,7 @@ function spawn_targets () {
 }
 ```
 
-Build this ``||functions:function||``.
+Build this ``||functions:script||``.
 
 ## Step 6
 

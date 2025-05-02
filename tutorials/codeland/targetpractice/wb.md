@@ -96,7 +96,7 @@ function give_bow () {
 }
 ```
 
-Find this ``||functions:function||`` and build this script.
+Find this ``||functions:script||`` and build this script.
 
 ## Step 2
 
@@ -129,7 +129,7 @@ function back_wall () {
 }
 ```
 
-Find this ``||functions:function||`` and build this script.
+Find this ``||functions:script||`` and build this script.
 
 ## Step 3
 
@@ -149,7 +149,7 @@ function spawn_targets () {
 }
 ```
 
-Find this ``||functions:function||`` and add the code in yellow.
+Find this ``||functions:script||`` and add the code in yellow.
 
 ## Try it!
 

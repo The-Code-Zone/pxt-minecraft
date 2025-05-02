@@ -58,7 +58,7 @@ function spawn_target (pos2: Position) {
 }
 
 player.onChat("run", function () {
-    positions.save(cameraPos(0, 0, 0))
+    positions.save(posCamera(0, 0, 0))
     range()
     back_wall()
     spawn_targets()
