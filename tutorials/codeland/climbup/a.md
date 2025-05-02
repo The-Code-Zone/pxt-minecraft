@@ -23,12 +23,6 @@ player.onChat("c", function () {
 
 ## Step 1
 
-let finish_line = 0
-let spawn_pos: Position = null
-let y = 0
-
-
-
 Create the following ``||variables:variables||``:
 - finish_line
 - spawn_pos
