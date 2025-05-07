@@ -89,6 +89,9 @@ function platform() {}
 // @hide
 function blocks2() {}
 
+// @hide
+function check() {}
+
 // @highlight
 player.onChat("d", function () {
     positions.save(posCamera(0, 0, 0))
@@ -99,6 +102,7 @@ player.onChat("d", function () {
     base()
     platform()
     blocks2()
+    check()
 })
 ```
 

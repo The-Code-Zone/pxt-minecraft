@@ -38,7 +38,7 @@ function base () {
     )
 }
 player.onChat("d", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions.save(world(69, 68, -72))
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)
@@ -85,7 +85,7 @@ function platform() {}
 function blocks2() {}
 
 player.onChat("d", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions.save(world(69, 68, -72))
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)

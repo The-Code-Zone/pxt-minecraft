@@ -56,6 +56,7 @@ player.onChat("d", function () {
     base()
     platform()
     blocks2()
+    check()
 })
 ```
 
