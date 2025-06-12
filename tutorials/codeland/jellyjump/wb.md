@@ -1,0 +1,104 @@
+### @explicitHints true
+
+### @diffs true
+
+# Jelly Jump
+
+```package
+tcz=github:the-code-zone/pxt-minecraft-extensions
+```
+
+```template
+let random_x = 0
+let random_z = 0
+let y = 0
+function spawn_pads () {
+    for (let index = 0; index < 10; index++) {
+        random_x = randint(0, 10)
+        random_z = randint(0, 10)
+        spawn_pad()
+    }
+}
+function spawn_pad () {
+    blocks.fill(
+    LIME_GLAZED_TERRACOTTA,
+    positions.load(random_x, y, random_z),
+    positions.load(random_x + 4, y, random_z + 4),
+    FillOperation.Replace
+    )
+}
+player.onChat("jump", function () {
+    positions.save(world(3, 67, -59))
+    y = 0
+    spawn_pads()
+    teleport()
+})
+function teleport () {
+    mobs.teleportToPosition(
+    mobs.target(ALL_PLAYERS),
+    positions.load(random_x + 3, y + 90, random_z + 3)
+    )
+}
+```
+
+## Step 1
+
+```blocks
+function teleport () {
+    // @highlight
+    gameplay.setGameMode(
+    SURVIVAL,
+    mobs.target(ALL_PLAYERS)
+    )
+    mobs.teleportToPosition(
+    mobs.target(ALL_PLAYERS),
+    positions.load(random_x + 3, y + 90, random_z + 3)
+    )
+}
+```
+
+Find this ``||functions:script||`` and add the code in yellow.
+
+## Step 2
+
+```blocks
+function spawn_pad () {
+    blocks.fill(
+    LIME_GLAZED_TERRACOTTA,
+    positions.load(random_x, y, random_z),
+    positions.load(random_x + 4, y, random_z + 4),
+    FillOperation.Replace
+    )
+    // @highlight
+    blocks.fill(
+    SLIME_BLOCK,
+    positions.load(random_x + 1, y, random_z + 1),
+    positions.load(random_x + 3, y, random_z + 3),
+    FillOperation.Replace
+    )
+}
+```
+
+Find this ``||functions:script||`` and add the code in yellow.
+
+## Step 3
+
+```blocks
+function spawn_pads () {
+    for (let index = 0; index < 10; index++) {
+        random_x = randint(0, 10)
+        random_z = randint(0, 10)
+        spawn_pad()
+        // @highlight
+        y += 10
+    }
+}
+```
+
+Find this ``||functions:script||`` and add the code in yellow. 
+
+Right now all the pads are spawning on top of eachother. 
+
+## Try it!
+
+Type **jump** to play!
