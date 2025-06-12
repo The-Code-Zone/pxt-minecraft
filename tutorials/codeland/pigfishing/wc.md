@@ -46,7 +46,7 @@ function pool () {
     )
 }
 player.onChat("pig", function () {
-    positions.save(world(80, 70, 100))
+    positions.save(world(80, 69, 99))
     pits_and_platforms()
     pool()
     spawn_mobs_and_items()

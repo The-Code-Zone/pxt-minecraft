@@ -39,26 +39,26 @@ function back_wall () {
     )
 }
 
-function spawn_target (pos2: Position) {
+function spawn_target (spawn_pos: Position) {
     shapes.circle(
     RED_WOOL,
-    pos2,
+    spawn_pos,
     2,
     Axis.X,
     ShapeOperation.Replace
     )
     shapes.circle(
     REDSTONE_LAMP,
-    pos2,
+    spawn_pos,
     1,
     Axis.X,
     ShapeOperation.Replace
     )
-    blocks.place(TARGET, pos2)
+    blocks.place(TARGET, spawn_pos)
 }
 
 player.onChat("run", function () {
-    positions.save(world(174, 17, 13))
+    positions.save(world(174, 73, 13))
     range()
     back_wall()
     spawn_targets()

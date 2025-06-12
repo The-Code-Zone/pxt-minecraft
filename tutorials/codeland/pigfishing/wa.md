@@ -10,7 +10,7 @@ tcz=github:the-code-zone/pxt-minecraft-extensions
 
 ```template
 player.onChat("pig", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions.save(world(80, 70, 100))
 })
 
 ```
@@ -109,7 +109,7 @@ function pits_and_platforms () {
 Build this ``||functions:script||``.
 
 
-## Step 3
+## Step 4
 
 ```blocks
 // @hide
@@ -122,7 +122,7 @@ function pits_and_platforms() {}
 function spawn_mobs_and_items() {}
 
 player.onChat("pig", function () {
-    positions.save(world(80, 70, 100))
+    positions.save(world(80, 69, 99))
     // @highlight
     pits_and_platforms()
     // @highlight

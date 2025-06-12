@@ -13,7 +13,7 @@ let x = 0
 let z = 0
 
 player.onChat("run", function () {
-    positions.save(world(174, 17, 13))
+    positions.save(world(174, 73, 13))
 })
 ```
 
@@ -105,22 +105,22 @@ Build this ``||functions:script||``.
 ## Step 4
 
 ```blocks
-function spawn_target (pos2: Position) {
+function spawn_target (spawn_pos: Position) {
     shapes.circle(
     RED_WOOL,
-    pos2,
+    spawn_pos,
     2,
     Axis.X,
     ShapeOperation.Replace
     )
     shapes.circle(
     REDSTONE_LAMP,
-    pos2,
+    spawn_pos,
     1,
     Axis.X,
     ShapeOperation.Replace
     )
-    blocks.place(TARGET, pos2)
+    blocks.place(TARGET, spawn_pos)
 }
 ```
 
@@ -162,7 +162,7 @@ function spawn_targets() {}
 function give_bow() {}
 
 player.onChat("run", function () {
-    positions.save(world(174, 17, 13)
+    positions.save(world(174, 73, 13))
     // @highlight
     range()
     // @highlight
