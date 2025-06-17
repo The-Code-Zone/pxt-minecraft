@@ -3,9 +3,7 @@
 ### @diffs true
 
 # Climb Up
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 function setup () {}

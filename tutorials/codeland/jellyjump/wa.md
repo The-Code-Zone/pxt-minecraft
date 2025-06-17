@@ -4,9 +4,7 @@
 
 # Jelly Jump
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let random_x = 0

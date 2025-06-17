@@ -4,9 +4,7 @@
 
 # Monster Arena
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let wave = 0

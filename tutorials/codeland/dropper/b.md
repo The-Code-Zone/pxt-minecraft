@@ -4,9 +4,7 @@
 
 # Dropper
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let start_pos: Position = null

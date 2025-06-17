@@ -4,9 +4,7 @@
 
 # Target Practice
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let x = 0

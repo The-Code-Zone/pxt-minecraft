@@ -4,9 +4,7 @@
 
 # Spleef
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let number_of_platforms = 0

@@ -4,9 +4,7 @@
 
 # On Rails Archery
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let target_x = 0

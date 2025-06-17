@@ -4,9 +4,7 @@
 
 # Climb Up
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+
 
 ```template
 let finish_line = 0
