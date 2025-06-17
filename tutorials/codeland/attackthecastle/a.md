@@ -4,9 +4,9 @@
 
 # Attack the Castle
 
-```package
+<!-- ```package
 tcz=github:the-code-zone/pxt-minecraft-extensions
-```
+``` -->
 
 ```template
 function setup_player () {
@@ -18,7 +18,7 @@ function setup_player () {
     mobs.applyEffect(STRENGTH, mobs.target(ALL_PLAYERS), 120, 2)
 }
 player.onChat("attack", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     setup_player()
 })
 ```
@@ -33,23 +33,23 @@ Make a new variable called **beacon_position**.
 function build_fort () {
     blocks.fill(
     CRACKED_STONE_BRICKS,
-    positions.load(-7, 5, -50),
-    positions.load(7, -1, -40),
+    positions2.load(-7, 5, -50),
+    positions2.load(7, -1, -40),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-6, 5, -49),
-    positions.load(6, 0, -41),
+    positions2.load(-6, 5, -49),
+    positions2.load(6, 0, -41),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-1, 2, -40),
-    positions.load(1, 0, -40),
+    positions2.load(-1, 2, -40),
+    positions2.load(1, 0, -40),
     FillOperation.Replace
     )
-    beacon_position = positions.load(0, 0, -45)
+    beacon_position = positions2.load(0, 0, -45)
     blocks.place(BEACON, beacon_position)
 }
 ```
@@ -102,7 +102,7 @@ function build_fort() {}
 function spawn_enemies() {}
 
 player.onChat("attack", function () {
-    positions.save(world(113, 70, -6))
+    positions2.save(world(113, 70, -6))
     build_fort()
     // @highlight
     setup_player()
