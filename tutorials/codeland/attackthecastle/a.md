@@ -4,9 +4,7 @@
 
 # Attack the Castle
 
-<!-- ```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-``` -->
+
 
 ```template
 function setup_player () {
