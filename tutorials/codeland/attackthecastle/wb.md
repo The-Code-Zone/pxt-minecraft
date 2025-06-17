@@ -4,10 +4,6 @@
 
 # Attack the Castle
 
-```package
-tcz=github:the-code-zone/pxt-minecraft-extensions
-```
-
 ```template
 let beacon_position: Position = null
 function build_fort () {

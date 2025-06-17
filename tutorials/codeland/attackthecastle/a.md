@@ -4,8 +4,6 @@
 
 # Attack the Castle
 
-
-
 ```template
 function setup_player () {
     mobs.give(
