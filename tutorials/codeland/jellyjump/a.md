@@ -11,7 +11,7 @@ let random_x = 0
 let random_z = 0
 let y = 0
 player.onChat("jump", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     y = 0
 })
 ```
@@ -21,14 +21,14 @@ player.onChat("jump", function () {
 function spawn_pad () {
     blocks.fill(
     LIME_GLAZED_TERRACOTTA,
-    positions.load(random_x, y, random_z),
-    positions.load(random_x + 4, y, random_z + 4),
+    positions2.load(random_x, y, random_z),
+    positions2.load(random_x + 4, y, random_z + 4),
     FillOperation.Replace
     )
     blocks.fill(
     SLIME_BLOCK,
-    positions.load(random_x + 1, y, random_z + 1),
-    positions.load(random_x + 3, y, random_z + 3),
+    positions2.load(random_x + 1, y, random_z + 1),
+    positions2.load(random_x + 3, y, random_z + 3),
     FillOperation.Replace
     )
 }
@@ -65,7 +65,7 @@ function teleport () {
     )
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(random_x + 3, y + 90, random_z + 3)
+    positions2.load(random_x + 3, y + 90, random_z + 3)
     )
 }
 ```
@@ -82,7 +82,7 @@ function spawn_pads() {}
 function teleport() {}
 
 player.onChat("jump", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     y = 0
     // @highlight
     spawn_pads()

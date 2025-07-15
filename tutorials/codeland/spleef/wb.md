@@ -14,22 +14,22 @@ function generate_platforms () {
     for (let index = 0; index < number_of_platforms; index++) {
         blocks.fill(
         GLASS,
-        positions.load(1, height, 1),
-        positions.load(30, height + 5, 30),
+        positions2.load(1, height, 1),
+        positions2.load(30, height + 5, 30),
         FillOperation.Hollow
         )
         blocks.fill(
         SNOW,
-        positions.load(2, height, 2),
-        positions.load(29, height, 29),
+        positions2.load(2, height, 2),
+        positions2.load(29, height, 29),
         FillOperation.Replace
         )
         height += 5
     }
     blocks.fill(
     LAVA,
-    positions.load(1, 5, 1),
-    positions.load(30, 5, 30),
+    positions2.load(1, 5, 1),
+    positions2.load(30, 5, 30),
     FillOperation.Replace
     )
 }
@@ -37,12 +37,12 @@ function generate_platforms () {
 function setup_players () {
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(15, height - 3, 15)
+    positions2.load(15, height - 3, 15)
     )
 }
 
 player.onChat("s", function () {
-    positions.save(world(128, 60, 96))
+    positions2.save(world(128, 60, 96))
     number_of_platforms = 5
     height = 8
     generate_platforms()
@@ -62,7 +62,7 @@ If you need help finding the right blocks, you can click on the ``||player:under
 function setup_players () {
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(15, height - 3, 15)
+    positions2.load(15, height - 3, 15)
     )
     // @highlight
     mobs.give(

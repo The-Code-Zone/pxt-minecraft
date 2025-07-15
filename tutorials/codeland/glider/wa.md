@@ -11,7 +11,7 @@ let x = 0
 let y = 0
 let z = 0
 player.onChat("g", function () {
-    positions.save(world(42, 184, -120))
+    positions2.save(world(42, 184, -120))
 })
 ```
 
@@ -19,14 +19,14 @@ player.onChat("g", function () {
 
 ```blocks
 function rings () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     x = 0
     y = -1
     z = 10
     for (let index = 0; index < 10; index++) {
         shapes.circle(
         GOLD_BLOCK,
-        positions.load(x, y, z),
+        positions2.load(x, y, z),
         4,
         Axis.Z,
         ShapeOperation.Hollow
@@ -44,8 +44,8 @@ Build this ``||functions:script||``.
 
 ```blocks
 function platform () {
-    player.teleport(positions.load(0, 0, 0))
-    blocks.place(STONE, positions.load(0, -1, 0))
+    player.teleport(positions2.load(0, 0, 0))
+    blocks.place(STONE, positions2.load(0, -1, 0))
 }
 ```
 
@@ -61,7 +61,7 @@ function platform() {}
 function rings() {}
 
 player.onChat("g", function () {
-    positions.save(world(42, 184, -120))
+    positions2.save(world(42, 184, -120))
     // @highlight
     platform()
     // @highlight

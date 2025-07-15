@@ -9,23 +9,23 @@ let beacon_position: Position = null
 function build_fort () {
     blocks.fill(
     CRACKED_STONE_BRICKS,
-    positions.load(-7, 5, -50),
-    positions.load(7, -1, -40),
+    positions2.load(-7, 5, -50),
+    positions2.load(7, -1, -40),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-6, 5, -49),
-    positions.load(6, 0, -41),
+    positions2.load(-6, 5, -49),
+    positions2.load(6, 0, -41),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-1, 2, -40),
-    positions.load(1, 0, -40),
+    positions2.load(-1, 2, -40),
+    positions2.load(1, 0, -40),
     FillOperation.Replace
     )
-    beacon_position = positions.load(0, 0, -45)
+    beacon_position = positions2.load(0, 0, -45)
     blocks.place(BEACON, beacon_position)
 }
 function setup_player () {
@@ -41,7 +41,7 @@ function spawn_enemies () {
     }
 }
 player.onChat("attack", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     build_fort()
     setup_player()
     spawn_enemies()

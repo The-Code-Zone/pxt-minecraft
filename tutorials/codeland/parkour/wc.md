@@ -18,7 +18,7 @@ function guardrails () {
     }
 }
 player.onChat("p", function () {
-    positions.save(world(25, 70, -18))
+    positions2.save(world(25, 70, -18))
     start_pos = player.position()
     base()
     generate_path()
@@ -27,20 +27,20 @@ player.onChat("p", function () {
 function base () {
     blocks.fill(
     COBBLESTONE,
-    positions.load(-2, -1, -7),
-    positions.load(-127, 2, 7),
+    positions2.load(-2, -1, -7),
+    positions2.load(-127, 2, 7),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-2, 0, -6),
-    positions.load(-127, 2, 6),
+    positions2.load(-2, 0, -6),
+    positions2.load(-127, 2, 6),
     FillOperation.Replace
     )
     blocks.fill(
     WATER,
-    positions.load(-3, -1, -6),
-    positions.load(-126, -1, 6),
+    positions2.load(-3, -1, -6),
+    positions2.load(-126, -1, 6),
     FillOperation.Replace
     )
 }
@@ -59,7 +59,7 @@ loops.forever(function () {
 })
 function place_stone () {
     for (let index = 0; index < randint(1, 2); index++) {
-        blocks.place(COBBLESTONE, positions.load(x, 1, z))
+        blocks.place(COBBLESTONE, positions2.load(x, 1, z))
         x += -1
     }
 }

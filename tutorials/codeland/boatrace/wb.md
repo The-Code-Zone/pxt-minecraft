@@ -10,31 +10,31 @@
 function course () {
     blocks.fill(
     PLANKS_DARK_OAK,
-    positions.load(8, -1, -10),
-    positions.load(40, -2, 10),
+    positions2.load(8, -1, -10),
+    positions2.load(40, -2, 10),
     FillOperation.Replace
     )
     blocks.fill(
     PLANKS_DARK_OAK,
-    positions.load(12, -1, -2),
-    positions.load(36, -1, 2),
+    positions2.load(12, -1, -2),
+    positions2.load(36, -1, 2),
     FillOperation.Replace
     )
 }
 player.onChat("run", function () {
-    positions.save(world(-2, 65, 151))
+    positions2.save(world(-2, 65, 151))
 })
 function teleport_to_start () {
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(23, 0, 0)
+    positions2.load(23, 0, 0)
     )
 }
 function startfinish () {
     shapes.line(
     WOOL,
-    positions.load(24, -2, 3),
-    positions.load(24, -2, 9)
+    positions2.load(24, -2, 3),
+    positions2.load(24, -2, 9)
     )
 }
 function boats () {
@@ -62,7 +62,7 @@ function boats() {}
 function teleport_to_start() {}
 
 player.onChat("run", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     // @highlight
     course()
     // @highlight
@@ -84,21 +84,21 @@ Find this script and add the code in yellow.
 function course () {
     blocks.fill(
     PLANKS_DARK_OAK,
-    positions.load(8, -1, -10),
-    positions.load(40, -2, 10),
+    positions2.load(8, -1, -10),
+    positions2.load(40, -2, 10),
     FillOperation.Replace
     )
     // @highlight
     blocks.fill(
     WATER,
-    positions.load(9, -1, -9),
-    positions.load(39, -1, 9),
+    positions2.load(9, -1, -9),
+    positions2.load(39, -1, 9),
     FillOperation.Replace
     )
     blocks.fill(
     PLANKS_DARK_OAK,
-    positions.load(12, -1, -2),
-    positions.load(36, -1, 2),
+    positions2.load(12, -1, -2),
+    positions2.load(36, -1, 2),
     FillOperation.Replace
     )
 }

@@ -20,13 +20,13 @@ function spawn_pads () {
 function spawn_pad () {
     blocks.fill(
     LIME_GLAZED_TERRACOTTA,
-    positions.load(random_x, y, random_z),
-    positions.load(random_x + 4, y, random_z + 4),
+    positions2.load(random_x, y, random_z),
+    positions2.load(random_x + 4, y, random_z + 4),
     FillOperation.Replace
     )
 }
 player.onChat("jump", function () {
-    positions.save(world(3, 67, -59))
+    positions2.save(world(3, 67, -59))
     y = 0
     spawn_pads()
     teleport()
@@ -34,7 +34,7 @@ player.onChat("jump", function () {
 function teleport () {
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(random_x + 3, y + 90, random_z + 3)
+    positions2.load(random_x + 3, y + 90, random_z + 3)
     )
 }
 ```
@@ -50,7 +50,7 @@ function teleport () {
     )
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(random_x + 3, y + 90, random_z + 3)
+    positions2.load(random_x + 3, y + 90, random_z + 3)
     )
 }
 ```
@@ -63,15 +63,15 @@ Find this ``||functions:script||`` and add the code in yellow.
 function spawn_pad () {
     blocks.fill(
     LIME_GLAZED_TERRACOTTA,
-    positions.load(random_x, y, random_z),
-    positions.load(random_x + 4, y, random_z + 4),
+    positions2.load(random_x, y, random_z),
+    positions2.load(random_x + 4, y, random_z + 4),
     FillOperation.Replace
     )
     // @highlight
     blocks.fill(
     SLIME_BLOCK,
-    positions.load(random_x + 1, y, random_z + 1),
-    positions.load(random_x + 3, y, random_z + 3),
+    positions2.load(random_x + 1, y, random_z + 1),
+    positions2.load(random_x + 3, y, random_z + 3),
     FillOperation.Replace
     )
 }

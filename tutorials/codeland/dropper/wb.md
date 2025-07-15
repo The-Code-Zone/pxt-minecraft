@@ -18,25 +18,25 @@ function check() {
 function base () {
     blocks.fill(
     BLACK_GLAZED_TERRACOTTA,
-    positions.load(-15, 0, -15),
-    positions.load(15, -1, 15),
+    positions2.load(-15, 0, -15),
+    positions2.load(15, -1, 15),
     FillOperation.Replace
     )
     blocks.fill(
     GOLD_BLOCK,
-    positions.load(-10, -2, -10),
-    positions.load(10, -2, 10),
+    positions2.load(-10, -2, -10),
+    positions2.load(10, -2, 10),
     FillOperation.Replace
     )
     blocks.fill(
     WATER,
-    positions.load(-10, 0, -10),
-    positions.load(10, -1, 10),
+    positions2.load(-10, 0, -10),
+    positions2.load(10, -1, 10),
     FillOperation.Replace
     )
 }
 player.onChat("d", function () {
-    positions.save(world(69, 68, -72))
+    positions2.save(world(69, 68, -72))
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)
@@ -51,7 +51,7 @@ player.onChat("d", function () {
 ```blocks
 function blocks2 () {
     for (let index = 0; index < 250; index++) {
-        blocks.place(BLACK_GLAZED_TERRACOTTA, positions.load(randint(-10, 10), randint(0, 100), randint(-10, 10)))
+        blocks.place(BLACK_GLAZED_TERRACOTTA, positions2.load(randint(-10, 10), randint(0, 100), randint(-10, 10)))
     }
 }
 ```
@@ -62,8 +62,8 @@ Build this ``||functions:script||``.
 
 ```blocks
 function platform () {
-    blocks.place(GOLD_BLOCK, positions.load(0, 100, 0))
-    player.teleport(positions.load(0, 101, 0))
+    blocks.place(GOLD_BLOCK, positions2.load(0, 100, 0))
+    player.teleport(positions2.load(0, 101, 0))
     start_pos = player.position()
 }
 ```
@@ -83,7 +83,7 @@ function platform() {}
 function blocks2() {}
 
 player.onChat("d", function () {
-    positions.save(world(69, 68, -72))
+    positions2.save(world(69, 68, -72))
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)

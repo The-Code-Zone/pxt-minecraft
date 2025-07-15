@@ -32,8 +32,8 @@ function give_loot () {
 function spawn_zombies () {
     for (let index = 0; index < wave * 5; index++) {
         mobs.spawn(mobs.monster(ZOMBIE), randpos(
-        positions.load(-14, 0, -14),
-        positions.load(14, 0, 14)
+        positions2.load(-14, 0, -14),
+        positions2.load(14, 0, 14)
         ))
         zombie_count += 1
     }
@@ -46,26 +46,26 @@ function setup_player () {
     )
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(0, 0, 0)
+    positions2.load(0, 0, 0)
     )
 }
 function build_arena () {
     blocks.fill(
     COBBLESTONE,
-    positions.load(-15, -1, -15),
-    positions.load(15, 3, 15),
+    positions2.load(-15, -1, -15),
+    positions2.load(15, 3, 15),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-14, 0, -14),
-    positions.load(14, 3, 14),
+    positions2.load(-14, 0, -14),
+    positions2.load(14, 3, 14),
     FillOperation.Replace
     )
     gameplay.timeSet(gameplay.time(NIGHT))
 }
 player.onChat("a", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     wave = 1
     zombie_count = 0
     build_arena()

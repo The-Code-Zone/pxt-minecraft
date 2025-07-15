@@ -12,19 +12,19 @@ let spawn_pos: Position = null
 let y = 0
 
 function setup () {
-    positions.save(world(64, 69, -26))
-    finish_line = positions.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions.load(-9, -19, -9)
+    positions2.save(world(64, 69, -26))
+    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
+    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
-    positions.load(-10, -20, -10),
-    positions.load(10, 0, 10),
+    positions2.load(-10, -20, -10),
+    positions2.load(10, 0, 10),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-9, -19, -9),
-    positions.load(9, 0, 9),
+    positions2.load(-9, -19, -9),
+    positions2.load(9, 0, 9),
     FillOperation.Replace
     )
 }
@@ -34,7 +34,7 @@ function play_loop () {
     while (y < 0) {
         y += 1
     }
-    blocks.place(GOLD_BLOCK, positions.load(0, 0, 0))
+    blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }
 
 player.onChat("c", function () {
@@ -47,19 +47,19 @@ player.onChat("c", function () {
 
 ```blocks
 function setup () {
-    positions.save(world(64, 69, -26))
-    finish_line = positions.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions.load(-9, -19, -9)
+    positions2.save(world(64, 69, -26))
+    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
+    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
-    positions.load(-10, -20, -10),
-    positions.load(10, 0, 10),
+    positions2.load(-10, -20, -10),
+    positions2.load(10, 0, 10),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-9, -19, -9),
-    positions.load(9, 0, 9),
+    positions2.load(-9, -19, -9),
+    positions2.load(9, 0, 9),
     FillOperation.Replace
     )
     // @highlight
@@ -98,13 +98,13 @@ function play_loop () {
         for (let index = 0; index < 40; index++) {
             // @highlight
             blocks.place(STONE, randpos(
-            positions.load(-9, y, -9),
-            positions.load(9, y, 9)
+            positions2.load(-9, y, -9),
+            positions2.load(9, y, 9)
             ))
         }
         y += 1
     }
-    blocks.place(GOLD_BLOCK, positions.load(0, 0, 0))
+    blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }
 ```
 

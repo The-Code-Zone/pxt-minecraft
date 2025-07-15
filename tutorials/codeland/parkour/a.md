@@ -11,11 +11,11 @@ let x = 0
 let start_pos: Position = null
 let z = 0
 player.onChat("p", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
 })
 function place_stone () {
     for (let index = 0; index < randint(1, 2); index++) {
-        blocks.place(COBBLESTONE, positions.load(x, 1, z))
+        blocks.place(COBBLESTONE, positions2.load(x, 1, z))
         z += 1
     }
 }
@@ -95,20 +95,20 @@ Build this ``||functions:script||``.
 function base () {
     blocks.fill(
     COBBLESTONE,
-    positions.load(-7, 0, 1),
-    positions.load(7, 3, 100),
+    positions2.load(-7, 0, 1),
+    positions2.load(7, 3, 100),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-6, 1, 1),
-    positions.load(6, 3, 100),
+    positions2.load(-6, 1, 1),
+    positions2.load(6, 3, 100),
     FillOperation.Replace
     )
     blocks.fill(
     WATER,
-    positions.load(-6, 0, 2),
-    positions.load(6, 0, 99),
+    positions2.load(-6, 0, 2),
+    positions2.load(6, 0, 99),
     FillOperation.Replace
     )
 }
@@ -129,7 +129,7 @@ function generate_path() {}
 function setup_player() {}
 
 player.onChat("p", function () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     start_pos = player.position()
     // @highlight
     base()

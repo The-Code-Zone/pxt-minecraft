@@ -28,14 +28,14 @@ player.onChat("g", function () {
     )
 })
 function rings () {
-    positions.save(posCamera(0, 0, 0))
+    positions2.save(posCamera(0, 0, 0))
     x = 0
     y = -1
     z = 10
     for (let index = 0; index < 10; index++) {
         shapes.circle(
         GOLD_BLOCK,
-        positions.load(x, y, z),
+        positions2.load(x, y, z),
         4,
         Axis.Z,
         ShapeOperation.Hollow

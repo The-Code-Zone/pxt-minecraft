@@ -25,8 +25,8 @@ function give_loot () {
 function spawn_zombies () {
     for (let index = 0; index < wave * 5; index++) {
         mobs.spawn(mobs.monster(ZOMBIE), randpos(
-        positions.load(-14, 0, -14),
-        positions.load(14, 0, 14)
+        positions2.load(-14, 0, -14),
+        positions2.load(14, 0, 14)
         ))
         zombie_count += 1
     }
@@ -39,44 +39,44 @@ function setup_player () {
     )
     blocks.fill(
     IRON_BARS,
-    positions.load(-3, 0, -3),
-    positions.load(3, 3, 3),
+    positions2.load(-3, 0, -3),
+    positions2.load(3, 3, 3),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-2, 0, -2),
-    positions.load(2, 3, 2),
+    positions2.load(-2, 0, -2),
+    positions2.load(2, 3, 2),
     FillOperation.Replace
     )
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(0, 0, 0)
+    positions2.load(0, 0, 0)
     )
 }
 function build_arena () {
     blocks.fill(
     COBBLESTONE,
-    positions.load(-15, -1, -15),
-    positions.load(15, 3, 15),
+    positions2.load(-15, -1, -15),
+    positions2.load(15, 3, 15),
     FillOperation.Replace
     )
     blocks.fill(
     GLASS,
-    positions.load(-15, 1, -15),
-    positions.load(15, 1, 15),
+    positions2.load(-15, 1, -15),
+    positions2.load(15, 1, 15),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-14, 0, -14),
-    positions.load(14, 3, 14),
+    positions2.load(-14, 0, -14),
+    positions2.load(14, 3, 14),
     FillOperation.Replace
     )
-    blocks.place(blocks.lever(BLOCK_SIDE_FACING_SOUTH), positions.load(0, 2, -14))
+    blocks.place(blocks.lever(BLOCK_SIDE_FACING_SOUTH), positions2.load(0, 2, -14))
 }
 player.onChat("a", function () {
-    positions.save(world(74, 70, 43))
+    positions2.save(world(74, 70, 43))
     wave = 1
     zombie_count = 0
     build_arena()
@@ -94,8 +94,8 @@ function setup_wave () {
     }
     blocks.fill(
     AIR,
-    positions.load(-3, 0, -3),
-    positions.load(3, 3, 3),
+    positions2.load(-3, 0, -3),
+    positions2.load(3, 3, 3),
     FillOperation.Replace
     )
 }
@@ -131,8 +131,8 @@ function setup_wave () {
     }
     blocks.fill(
     AIR,
-    positions.load(-3, 0, -3),
-    positions.load(3, 3, 3),
+    positions2.load(-3, 0, -3),
+    positions2.load(3, 3, 3),
     FillOperation.Replace
     )
     // @highlight
@@ -177,25 +177,25 @@ Find this ``||functions:script||`` and add the code in yellow.
 function build_arena () {
     blocks.fill(
     COBBLESTONE,
-    positions.load(-15, -1, -15),
-    positions.load(15, 3, 15),
+    positions2.load(-15, -1, -15),
+    positions2.load(15, 3, 15),
     FillOperation.Replace
     )
     blocks.fill(
     GLASS,
-    positions.load(-15, 1, -15),
-    positions.load(15, 1, 15),
+    positions2.load(-15, 1, -15),
+    positions2.load(15, 1, 15),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-14, 0, -14),
-    positions.load(14, 3, 14),
+    positions2.load(-14, 0, -14),
+    positions2.load(14, 3, 14),
     FillOperation.Replace
     )
     // @highlight
-    blocks.place(IRON_DOOR, positions.load(0, 0, -15))
-    blocks.place(blocks.lever(BLOCK_SIDE_FACING_SOUTH), positions.load(0, 2, -14))
+    blocks.place(IRON_DOOR, positions2.load(0, 0, -15))
+    blocks.place(blocks.lever(BLOCK_SIDE_FACING_SOUTH), positions2.load(0, 2, -14))
     // @highlight
     gameplay.timeSet(gameplay.time(NIGHT))
 }

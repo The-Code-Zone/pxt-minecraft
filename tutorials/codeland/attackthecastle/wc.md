@@ -9,20 +9,20 @@ let beacon_position: Position = null
 function build_fort () {
     blocks.fill(
     CRACKED_STONE_BRICKS,
-    positions.load(-7, 5, -50),
-    positions.load(7, -1, -40),
+    positions2.load(-7, 5, -50),
+    positions2.load(7, -1, -40),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-6, 5, -49),
-    positions.load(6, 0, -41),
+    positions2.load(-6, 5, -49),
+    positions2.load(6, 0, -41),
     FillOperation.Replace
     )
     blocks.fill(
     AIR,
-    positions.load(-1, 2, -40),
-    positions.load(1, 0, -40),
+    positions2.load(-1, 2, -40),
+    positions2.load(1, 0, -40),
     FillOperation.Replace
     )
     beacon_position = world(113, 70, -53)
@@ -49,7 +49,7 @@ function spawn_enemies () {
     display.showMessage("Beacon destroyed! You win!")
 }
 player.onChat("attack", function () {
-    positions.save(world(113, 70, -6))
+    positions2.save(world(113, 70, -6))
     build_fort()
     setup_player()
     spawn_enemies()

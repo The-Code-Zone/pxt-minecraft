@@ -15,7 +15,7 @@ let number_of_platforms = 0
 
 ```blocks
 player.onChat("s", function () {
-    positions.save(world(128, 60, 96))
+    positions2.save(world(128, 60, 96))
     number_of_platforms = 5
     height = 8
 })
@@ -34,14 +34,14 @@ function generate_platforms () {
     for (let index = 0; index < number_of_platforms; index++) {
         blocks.fill(
         GLASS,
-        positions.load(1, height, 1),
-        positions.load(30, height + 5, 30),
+        positions2.load(1, height, 1),
+        positions2.load(30, height + 5, 30),
         FillOperation.Hollow
         )
         blocks.fill(
         SNOW,
-        positions.load(2, height, 2),
-        positions.load(29, height, 29),
+        positions2.load(2, height, 2),
+        positions2.load(29, height, 29),
         FillOperation.Replace
         )
         height += 5
@@ -59,7 +59,7 @@ Using the variables from the last step, we can ``||loops:loop some code||`` and 
 function setup_players () {
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
-    positions.load(15, height - 3, 15)
+    positions2.load(15, height - 3, 15)
     )
     mobs.give(
     mobs.target(ALL_PLAYERS),
@@ -87,7 +87,7 @@ function generate_platforms () {}
 function setup_players() {}
 
 player.onChat("s", function () {
-    positions.save(world(128, 60, 96))
+    positions2.save(world(128, 60, 96))
     number_of_platforms = 5
     height = 8
     // @highlight
@@ -108,14 +108,14 @@ function generate_platforms () {
     for (let index = 0; index < number_of_platforms; index++) {
         blocks.fill(
         GLASS,
-        positions.load(1, height, 1),
-        positions.load(30, height + 5, 30),
+        positions2.load(1, height, 1),
+        positions2.load(30, height + 5, 30),
         FillOperation.Hollow
         )
         blocks.fill(
         SNOW,
-        positions.load(2, height, 2),
-        positions.load(29, height, 29),
+        positions2.load(2, height, 2),
+        positions2.load(29, height, 29),
         FillOperation.Replace
         )
         height += 5
@@ -123,8 +123,8 @@ function generate_platforms () {
     // @highlight
     blocks.fill(
     LAVA,
-    positions.load(1, 5, 1),
-    positions.load(30, 5, 30),
+    positions2.load(1, 5, 1),
+    positions2.load(30, 5, 30),
     FillOperation.Replace
     )
 }
