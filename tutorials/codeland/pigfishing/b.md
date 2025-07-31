@@ -138,4 +138,4 @@ Find this ``||functions:script||`` and add the code in yellow.
 
 ## Try it!
 
-Type **a** to play!
+Type **pig** to play!

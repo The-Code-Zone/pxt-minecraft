@@ -90,4 +90,4 @@ function spawn_mobs_and_items () {
 
 ## Try it!
 
-Type **a** to play!
+Type **pig** to play!
