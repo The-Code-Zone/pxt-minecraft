@@ -160,7 +160,7 @@ function spawn_targets() {}
 function give_bow() {}
 
 player.onChat("run", function () {
-    positions2.save(world(174, 17, 13)
+    positions2.save(posCamera(0, 0, 0))
     // @highlight
     range()
     // @highlight

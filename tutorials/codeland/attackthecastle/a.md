@@ -98,7 +98,7 @@ function build_fort() {}
 function spawn_enemies() {}
 
 player.onChat("attack", function () {
-    positions2.save(world(113, 70, -6))
+    positions2.save(posCamera(0, 0, 0))
     build_fort()
     // @highlight
     setup_player()

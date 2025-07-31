@@ -47,7 +47,7 @@ player.onChat("c", function () {
 
 ```blocks
 function setup () {
-    positions2.save(world(64, 69, -26))
+    positions2.save(posCamera(0, 0, 0))
     finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
     spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
