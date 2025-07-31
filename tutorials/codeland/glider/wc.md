@@ -18,11 +18,7 @@ player.onChat("g", function () {
     positions2.save(world(42, 184, -120))
     platform()
     rings()
-    mobs.give(
-    mobs.target(LOCAL_PLAYER),
-    ELYTRA,
-    1
-    )
+    entities.replaceItem(ELYTRA, Slot.Chest, mobs.target(LOCAL_PLAYER))
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)

@@ -67,11 +67,7 @@ player.onChat("g", function () {
     // @highlight
     rings()
     // @highlight
-    mobs.give(
-    mobs.target(LOCAL_PLAYER),
-    ELYTRA,
-    1
-    )
+    entities.replaceItem(ELYTRA, Slot.Chest, mobs.target(LOCAL_PLAYER))
     // @highlight
     gameplay.setGameMode(
     SURVIVAL,
