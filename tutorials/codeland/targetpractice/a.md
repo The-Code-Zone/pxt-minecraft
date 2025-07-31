@@ -103,22 +103,22 @@ Build this ``||functions:script||``.
 ## Step 4
 
 ```blocks
-function spawn_target (pos2: Position) {
+function spawn_target (pos: Position) {
     shapes.circle(
     RED_WOOL,
-    pos2,
+    pos,
     2,
     Axis.X,
     ShapeOperation.Replace
     )
     shapes.circle(
     REDSTONE_LAMP,
-    pos2,
+    pos,
     1,
     Axis.X,
     ShapeOperation.Replace
     )
-    blocks.place(TARGET, pos2)
+    blocks.place(TARGET, pos)
 }
 ```
 

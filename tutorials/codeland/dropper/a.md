@@ -13,7 +13,7 @@
 ## Step 1
 
 ```blocks
-function blocks2 () {
+function blocks () {
     for (let index = 0; index < 250; index++) {
         blocks.place(BLACK_GLAZED_TERRACOTTA, positions2.load(randint(-10, 10), randint(0, 100), randint(-10, 10)))
     }
@@ -85,7 +85,7 @@ function base() {}
 function platform() {}
 
 // @hide
-function blocks2() {}
+function blocks() {}
 
 // @hide
 function check() {}
@@ -99,7 +99,7 @@ player.onChat("d", function () {
     )
     base()
     platform()
-    blocks2()
+    blocks()
     check()
 })
 ```
