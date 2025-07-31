@@ -172,6 +172,8 @@ player.onChat("run", function () {
 })
 ```
 
+Find this ``||functions:script||`` and add the code in yellow.
+
 ## Try it!
 
 Type **run** to play!
