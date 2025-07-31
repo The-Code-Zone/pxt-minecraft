@@ -42,6 +42,12 @@ function rings () {
 ## Step 1
 
 ```blocks
+// @hide
+function platform() {}
+
+// @hide
+function rings() {}
+
 player.onChat("g", function () {
     positions2.save(world(42, 184, -120))
     platform()

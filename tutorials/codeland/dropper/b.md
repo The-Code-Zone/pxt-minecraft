@@ -82,6 +82,9 @@ function platform() {}
 // @hide
 function blocks2() {}
 
+// @hide
+function check() {}
+
 player.onChat("d", function () {
     positions2.save(posCamera(0, 0, 0))
     gameplay.setGameMode(

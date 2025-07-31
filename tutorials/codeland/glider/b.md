@@ -41,6 +41,12 @@ function rings () {
 ## Step 1
 
 ```blocks
+// @hide
+function platform() {}
+
+// @hide
+function rings() {}
+
 player.onChat("g", function () {
     platform()
     rings()

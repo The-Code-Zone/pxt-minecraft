@@ -106,6 +106,13 @@ Build this ``||functions:script||``.
 ## Step 5
 
 ```blocks
+// @hide
+function give_loot() {}
+
+// @hide
+function spawn_zombies() {}
+
+// @highlight
 function setup_wave () {
     gameplay.title(mobs.target(ALL_PLAYERS), "Wave " + wave + " begins in:", "")
     loops.pause(3000)

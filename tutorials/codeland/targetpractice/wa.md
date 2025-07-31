@@ -128,7 +128,7 @@ Build this ``||functions:script||``.
 
 ```blocks
 // @hide
-function spawn_target() {}
+function spawn_targets() {}
 
 // @highlight
 function spawn_targets () {

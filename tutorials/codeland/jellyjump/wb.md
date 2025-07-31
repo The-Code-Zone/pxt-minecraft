@@ -82,6 +82,9 @@ Find this ``||functions:script||`` and add the code in yellow.
 ## Step 3
 
 ```blocks
+// @hide
+function spawn_pad()
+
 function spawn_pads () {
     for (let index = 0; index < 10; index++) {
         random_x = randint(0, 10)
