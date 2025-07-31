@@ -2,7 +2,7 @@
 
 ### @diffs true
 
-# On Rails Archery
+# On-Rails Archery
 
 
 
