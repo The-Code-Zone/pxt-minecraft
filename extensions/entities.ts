@@ -94,13 +94,13 @@ namespace entities {
         player.execute(`replaceitem entity ${target} ${getSlot(slot)} 1 ${itemName}`)
     }
 
-	// --- Spawnpoints ---
+	// --- Respawning ---
 
 	//% block="set spawnpoint for %target || at %position"
     //% target.shadow=minecraftTarget
     //% position.shadow=minecraftCreatePosition
     //% expandableArgumentMode="enabled"
-	//% group=Spawnpoints
+	//% group=Respawning weight=90
     export function spawnpoint(target: TargetSelector, position?: Position) {
         if (position == null) {
             mobs.execute(target, pos(0, 0, 0), `spawnpoint`)
@@ -111,6 +111,20 @@ namespace entities {
             const z = worldPos.getValue(Axis.Z)
             mobs.execute(target, position, `spawnpoint @s ${x} ${y} ${z}`)
         }
+    }
+
+    //% block="when I respawn, change game mode to %mode"
+	//% group=Respawning weight=80
+    export function respawnMode(mode: GameMode) {
+        player.onDied(function () {
+            while (!(blocks.testForBlock(AIR, pos(0, 0, 0)))) {
+                continue;
+            }
+            gameplay.setGameMode(
+                mode,
+                mobs.target(LOCAL_PLAYER)
+            )
+        })
     }
 
 }
