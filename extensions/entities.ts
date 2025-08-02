@@ -59,6 +59,14 @@ namespace entities {
         return target
     }
 
+    //% block
+    //% group=Selectors weight=40
+    export function allItems(): TargetSelector {
+        let target = mobs.target(ALL_ENTITIES)
+        target.addRule("type", "item")
+        return target
+    }
+
     // --- Tagging ---
 
     //% block="apply tag $tag to $target=minecraftTarget"
