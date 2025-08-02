@@ -7,7 +7,7 @@ enum Slot {
     Offhand
 }
 
-//% weight=65 color=#A55BA5 icon="\uf06c"
+//% weight=65 color=#9276CC icon="\uf06c"
 namespace entities {
 
     // --- Queries ---
@@ -92,6 +92,25 @@ namespace entities {
     export function replaceItem(itemId: number, slot: Slot, target: TargetSelector) {
         let itemName = blocks.nameOfBlock(itemId).replaceAll(" ", "_")
         player.execute(`replaceitem entity ${target} ${getSlot(slot)} 1 ${itemName}`)
+    }
+
+	// --- Spawnpoints ---
+
+	//% block="set spawnpoint for %target || at %position"
+    //% target.shadow=minecraftTarget
+    //% position.shadow=minecraftCreatePosition
+    //% expandableArgumentMode="enabled"
+	//% group=Spawnpoints
+    export function spawnpoint(target: TargetSelector, position?: Position) {
+        if (position == null) {
+            mobs.execute(target, pos(0, 0, 0), `spawnpoint`)
+        } else {
+            const worldPos = position.toWorld()
+            const x = worldPos.getValue(Axis.X)
+            const y = worldPos.getValue(Axis.Y)
+            const z = worldPos.getValue(Axis.Z)
+            mobs.execute(target, position, `spawnpoint @s ${x} ${y} ${z}`)
+        }
     }
 
 }
