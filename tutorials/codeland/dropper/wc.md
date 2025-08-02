@@ -7,18 +7,9 @@
 
 
 ```template
-let start_pos: Position = null
-function check () {
-    while (true) {
-        if (blocks.testForBlock(BLACK_GLAZED_TERRACOTTA, pos(0, -1, 0))) {
-            player.teleport(start_pos)
-        }
-    }
-}
 function platform () {
-    blocks.place(GOLD_BLOCK, positions2.load(0, 100, 0))
+    blocks.place(GLASS, positions2.load(0, 100, 0))
     player.teleport(positions2.load(0, 101, 0))
-    start_pos = player.position()
 }
 function base () {
     blocks.fill(
@@ -40,22 +31,45 @@ function base () {
     FillOperation.Replace
     )
 }
-function blocks () {
+function blocks2 () {
+    blocks.fill(
+    AIR,
+    positions2.load(-10, 0, -10),
+    positions2.load(10, 49, 10),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    AIR,
+    positions2.load(-10, 50, -10),
+    positions2.load(10, 99, 10),
+    FillOperation.Replace
+    )
     for (let index = 0; index < 250; index++) {
-        blocks.place(BLACK_GLAZED_TERRACOTTA, positions2.load(randint(-10, 10), randint(0, 100), randint(-10, 10)))
+        blocks.place(BLACK_GLAZED_TERRACOTTA, positions2.load(randint(-10, 10), randint(0, 99), randint(-10, 10)))
     }
 }
 player.onChat("d", function () {
     positions2.save(world(69, 68, -72))
+    mobs.execute(
+    mobs.target(LOCAL_PLAYER),
+    pos(0, 0, 0),
+    "spawnpoint @s 69 169 -72"
+    )
     gameplay.setGameMode(
     SURVIVAL,
     mobs.target(LOCAL_PLAYER)
     )
     base()
     platform()
-    blocks()
-    check()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "Wait...", "")
+    blocks2()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "GO!", "")
 })
+while (true) {
+    if (blocks.testForBlock(BLACK_GLAZED_TERRACOTTA, pos(0, -1, 0))) {
+        player.teleport(positions2.load(0, 101, 0))
+    }
+}
 ```
 
 ## Try it!

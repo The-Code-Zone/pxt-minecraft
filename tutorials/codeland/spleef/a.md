@@ -15,9 +15,12 @@ let number_of_platforms = 0
 
 ```blocks
 player.onChat("s", function () {
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
+    entities.respawnMode(CREATIVE)
     positions2.save(posCamera(0, 0, 0))
     number_of_platforms = 5
     height = 8
+    mobs.kill(entities.allItems())
 })
 ```
 
@@ -87,9 +90,12 @@ function generate_platforms () {}
 function setup_players() {}
 
 player.onChat("s", function () {
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
+    entities.respawnMode(CREATIVE)
     positions2.save(posCamera(0, 0, 0))
     number_of_platforms = 5
     height = 8
+    mobs.kill(entities.allItems())
     // @highlight
     generate_platforms()
     // @highlight
