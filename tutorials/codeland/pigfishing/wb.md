@@ -43,6 +43,7 @@ function pits_and_platforms () {
     )
 }
 function spawn_mobs_and_items () {
+    mobs.teleportToPosition(mobs.entitiesByType(PIG), pos(0, -999, 0))
     for (let index = 0; index < 10; index++) {
         mobs.spawn(PIG, positions2.load(0, 0, -11))
     }
@@ -52,7 +53,6 @@ function spawn_mobs_and_items () {
     1
     )
 }
-
 ```
 
 ## Step 1

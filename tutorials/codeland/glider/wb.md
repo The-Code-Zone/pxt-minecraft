@@ -7,34 +7,35 @@
 
 
 ```template
-let x = 0
-let y = 0
-let z = 0
 function platform () {
-    player.teleport(positions2.load(0, 0, 0))
     blocks.place(STONE, positions2.load(0, -1, 0))
+    player.teleport(positions2.load(0, 0, 0))
+    entities.spawnpoint(mobs.target(LOCAL_PLAYER), positions2.load(0, 0, 0))
 }
 player.onChat("g", function () {
     positions2.save(world(42, 184, -120))
     platform()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "Wait...", "")
     rings()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "Go!", "")
 })
 function rings () {
-    positions2.save(posCamera(0, 0, 0))
-    x = 0
-    y = -1
-    z = 10
+    positions2.save(positions2.load(0, -10, -15))
     for (let index = 0; index < 10; index++) {
+        blocks.fill(
+        AIR,
+        positions2.load(-19, -4, 0),
+        positions2.load(19, 4, 0),
+        FillOperation.Replace
+        )
         shapes.circle(
         GOLD_BLOCK,
-        positions2.load(x, y, z),
+        positions2.load(0, 0, 0),
         4,
         Axis.Z,
         ShapeOperation.Hollow
         )
-        x = 0
-        y += -10
-        z += 30
+        positions2.save(positions2.load(0, -10, -30))
     }
 }
 ```
@@ -51,7 +52,9 @@ function rings() {}
 player.onChat("g", function () {
     positions2.save(world(42, 184, -120))
     platform()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "Wait...", "")
     rings()
+    gameplay.title(mobs.target(LOCAL_PLAYER), "Go!", "")
     // @highlight
     entities.replaceItem(ELYTRA, Slot.Chest, mobs.target(LOCAL_PLAYER))
     // @highlight
@@ -68,22 +71,23 @@ Find this ``||functions:script||`` and make sure the player starts with an Elytr
 
 ```blocks
 function rings () {
-    positions2.save(posCamera(0, 0, 0))
-    x = 0
-    y = -1
-    z = 10
+    positions2.save(positions2.load(0, -10, -15))
     for (let index = 0; index < 10; index++) {
+        blocks.fill(
+        AIR,
+        positions2.load(-19, -4, 0),
+        positions2.load(19, 4, 0),
+        FillOperation.Replace
+        )
+        // @highlight
         shapes.circle(
         GOLD_BLOCK,
-        positions2.load(x, y, z),
+        positions2.load(randint(-15, 15), 0, 0),
         4,
         Axis.Z,
         ShapeOperation.Hollow
         )
-        // @highlight
-        x = randint(-15, 15)
-        y += -10
-        z += 30
+        positions2.save(positions2.load(0, -10, -30))
     }
 }
 ```
