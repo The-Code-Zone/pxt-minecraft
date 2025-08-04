@@ -8,7 +8,6 @@
 
 ```template
 let z = 0
-let start_pos: Position = null
 let x = 0
 function guardrails () {
     if (z < -6) {
@@ -19,7 +18,6 @@ function guardrails () {
 }
 player.onChat("p", function () {
     positions2.save(world(25, 70, -18))
-    start_pos = player.position()
     base()
     generate_path()
     setup_player()
@@ -54,7 +52,7 @@ function setup_player () {
 }
 loops.forever(function () {
     if (blocks.testForBlock(WATER, pos(0, 0, 0))) {
-        player.teleport(start_pos)
+        player.teleport(positions2.load(0, 0, 0))
     }
 })
 function place_stone () {

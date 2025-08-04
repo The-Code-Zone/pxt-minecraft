@@ -83,7 +83,7 @@ Find this ``||functions:script||`` and add the code in yellow.
 
 ```blocks
 // @hide
-function spawn_pad()
+function spawn_pad() {}
 
 function spawn_pads () {
     for (let index = 0; index < 10; index++) {

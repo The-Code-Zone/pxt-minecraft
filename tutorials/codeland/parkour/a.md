@@ -8,7 +8,6 @@
 
 ```template
 let x = 0
-let start_pos: Position = null
 let z = 0
 player.onChat("p", function () {
     positions2.save(posCamera(0, 0, 0))
@@ -67,7 +66,7 @@ Build this ``||functions:script||``.
 ```blocks
 loops.forever(function () {
     if (blocks.testForBlock(WATER, pos(0, 0, 0))) {
-        player.teleport(start_pos)
+        player.teleport(positions2.load(0, 0, 0))
     }
 })
 ```
@@ -130,7 +129,6 @@ function setup_player() {}
 
 player.onChat("p", function () {
     positions2.save(posCamera(0, 0, 0))
-    start_pos = player.position()
     // @highlight
     base()
     // @highlight

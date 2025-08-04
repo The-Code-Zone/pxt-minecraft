@@ -6,7 +6,7 @@
 
 
 
-```template
+```customts
 let height = 0
 let number_of_platforms = 0
 ```

@@ -6,10 +6,13 @@
 
 
 
-```template
+```customts
 let target_x = 0
 let target_y = 0
 let target_z = 0
+```
+
+```template
 player.onChat("a", function () {
     positions2.save(world(119, 72, 26))
 })

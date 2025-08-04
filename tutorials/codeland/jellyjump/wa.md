@@ -6,9 +6,12 @@
 
 
 
-```template
+```customts
 let random_x = 0
 let random_z = 0
+```
+
+```template
 let y = 0
 player.onChat("jump", function () {
     positions2.save(world(3, 67, -59))

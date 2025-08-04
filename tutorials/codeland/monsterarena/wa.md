@@ -6,10 +6,13 @@
 
 
 
+```customts
+let countdown = 0
+```
+
 ```template
 let wave = 0
 let zombie_count = 0
-let countdown = 0
 function setup_wave() {}
 mobs.onMobKilled(mobs.monster(ZOMBIE), function () {
     zombie_count += -1
