@@ -51,10 +51,10 @@ function setup_players () {
 }
 
 player.onChat("s", function () {
-    entities.spawnpoint(mobs.target(ALL_PLAYERS))
+    positions2.save(world(128, 60, 96))
     number_of_platforms = 5
     height = 8
-    positions2.save(world(128, 60, 96))
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
     mobs.kill(entities.allItems())
     generate_platforms()
     setup_players()
