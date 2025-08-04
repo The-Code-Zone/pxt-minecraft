@@ -15,12 +15,9 @@ let number_of_platforms = 0
 
 ```blocks
 player.onChat("s", function () {
-    entities.spawnpoint(mobs.target(ALL_PLAYERS))
-    entities.respawnMode(CREATIVE)
     positions2.save(posCamera(0, 0, 0))
     number_of_platforms = 5
     height = 8
-    mobs.kill(entities.allItems())
 })
 ```
 
@@ -90,11 +87,12 @@ function generate_platforms () {}
 function setup_players() {}
 
 player.onChat("s", function () {
-    entities.spawnpoint(mobs.target(ALL_PLAYERS))
-    entities.respawnMode(CREATIVE)
     positions2.save(posCamera(0, 0, 0))
     number_of_platforms = 5
     height = 8
+    // @highlight
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
+    // @highlight
     mobs.kill(entities.allItems())
     // @highlight
     generate_platforms()
@@ -105,7 +103,9 @@ player.onChat("s", function () {
 
 Find this script and add the blocks in yellow.
 
-We need to ``||functions:add some calls to the functions we made earlier||`` so the code actually runs.
+We'll ``||entities:set our spawnpoint||`` to come back to after the game, and ``||mobs:clear away any snowballs||`` that are left over from the previous game.
+
+We also need to ``||functions:add some calls to the functions we made earlier||`` so the code actually runs.
 
 ## Step 5 ... lava!
 
@@ -139,6 +139,16 @@ function generate_platforms () {
 Right now players just land at the bottom when they lose.
 
 ``||blocks:Fill the bottom with lava!||``
+
+## Step 6
+
+```blocks
+entities.onPlayerRespawned(function () {
+    gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
+})
+```
+
+And finally, let's ``||entities:build a respawn script||``, so we can go back to creative mode after the game ends.
 
 ## Try it!
 

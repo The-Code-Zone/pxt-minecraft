@@ -121,15 +121,15 @@ namespace entities {
         }
     }
 
-    //% block="when I respawn, change game mode to %mode"
+    //% block
     //% group=Respawning weight=80
-    export function respawnMode(mode: GameMode) {
+    export function onPlayerRespawned(handler: () => void) {
         player.onDied(function () {
             let position = player.position()
             while (position.toString() == player.position().toString()) {
                 continue
             }
-            gameplay.setGameMode(mode, mobs.target(LOCAL_PLAYER))
+            handler()
         })
     }
 
