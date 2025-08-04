@@ -58,6 +58,7 @@ function platform() {}
 function rings() {}
 
 player.onChat("g", function () {
+    // @highlight
     positions2.save(world(42, 184, -120))
     // @highlight
     platform()
