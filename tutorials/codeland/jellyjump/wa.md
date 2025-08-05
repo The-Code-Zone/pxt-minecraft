@@ -75,6 +75,7 @@ function teleport () {
     mobs.target(ALL_PLAYERS),
     positions2.load(random_x + 2, 90, random_z + 2)
     )
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
 }
 ```
 
