@@ -28,8 +28,10 @@ player.onTravelled(SWIM_WATER, function () {
     gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
 })
 function rings () {
-    positions2.save(positions2.load(0, -10, -15))
+    positions2.change(Axis.Z, 15)
     for (let index = 0; index < 10; index++) {
+        positions2.change(Axis.Y, -10)
+        positions2.change(Axis.Z, -30)
         blocks.fill(
         AIR,
         positions2.load(-19, -4, 0),
@@ -43,7 +45,6 @@ function rings () {
         Axis.Z,
         ShapeOperation.Hollow
         )
-        positions2.save(positions2.load(0, -10, -30))
     }
 }
 ```

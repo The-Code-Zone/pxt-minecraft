@@ -108,7 +108,7 @@ function spawn_pads () {
         random_z = randint(0, 10)
         spawn_pad()
         // @highlight
-        positions2.save(positions2.load(0, 10, 0))
+        positions2.change(Axis.Y, 10)
     }
 }
 ```
