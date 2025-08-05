@@ -10,11 +10,28 @@ namespace positions2 {
     }
 
     //% block="@ $x @ $y @ $z"
+    //% weight=90
     export function load(x: number, y: number, z: number) {
         return positions.add(
             _saved_position,
             positions.createWorld(x, y, z)
         )
+    }
+
+    //% block="change saved %axis by %value"
+    //% weight=80
+    export function change(axis: Axis, value: number) {
+        switch(axis) {
+            case Axis.X:
+                save(load(value, 0, 0))
+                break
+            case Axis.Y:
+                save(load(0, value, 0))
+                break
+            case Axis.Z:
+                save(load(0, 0, value))
+                break
+        }
     }
 
 }
