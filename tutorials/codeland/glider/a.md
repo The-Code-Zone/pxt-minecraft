@@ -51,6 +51,16 @@ Build this ``||functions:script||``.
 ## Step 3
 
 ```blocks
+player.onTravelled(SWIM_WATER, function () {
+    gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
+})
+```
+
+Build this ``||functions:script||``.
+
+## Step 4
+
+```blocks
 // @hide
 function platform() {}
 

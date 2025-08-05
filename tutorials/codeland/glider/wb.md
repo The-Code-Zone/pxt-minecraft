@@ -19,6 +19,9 @@ player.onChat("g", function () {
     rings()
     gameplay.title(mobs.target(LOCAL_PLAYER), "Go!", "")
 })
+player.onTravelled(SWIM_WATER, function () {
+    gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
+})
 function rings () {
     positions2.save(positions2.load(0, -10, -15))
     for (let index = 0; index < 10; index++) {

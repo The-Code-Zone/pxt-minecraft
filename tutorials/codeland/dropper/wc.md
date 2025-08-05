@@ -31,7 +31,7 @@ function base () {
     FillOperation.Replace
     )
 }
-function blocks2 () {
+function blocks () {
     blocks.fill(
     AIR,
     positions2.load(-10, 0, -10),
@@ -62,7 +62,7 @@ player.onChat("d", function () {
     base()
     platform()
     gameplay.title(mobs.target(LOCAL_PLAYER), "Wait...", "")
-    blocks2()
+    blocks()
     gameplay.title(mobs.target(LOCAL_PLAYER), "GO!", "")
 })
 while (true) {
