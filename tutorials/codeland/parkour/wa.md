@@ -14,7 +14,7 @@ player.onChat("p", function () {
 })
 function place_stone () {
     for (let index = 0; index < randint(1, 2); index++) {
-        blocks.place(COBBLESTONE, positions2.load(x, 1, z))
+        blocks.place(COBBLESTONE, positions2.load(x, 0, z))
         x += -1
     }
 }
@@ -64,10 +64,8 @@ Build this ``||functions:script||``.
 ## Step 3
 
 ```blocks
-loops.forever(function () {
-    if (blocks.testForBlock(WATER, pos(0, 0, 0))) {
-        player.teleport(positions2.load(0, 0, 0))
-    }
+player.onTravelled(SWIM_WATER, function () {
+    player.teleport(positions2.load(0, 0, 0))
 })
 ```
 

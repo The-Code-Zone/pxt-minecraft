@@ -49,7 +49,7 @@ function setup_player () {
 }
 function place_stone () {
     for (let index = 0; index < randint(1, 2); index++) {
-        blocks.place(COBBLESTONE, positions2.load(x, 1, z))
+        blocks.place(COBBLESTONE, positions2.load(x, 0, z))
         x += -1
     }
 }
@@ -95,10 +95,8 @@ Find this ``||functions:script||`` and add the code in yellow.
 ## Step 2
 
 ```blocks
-loops.forever(function () {
-    if (blocks.testForBlock(WATER, pos(0, 0, 0))) {
-        player.teleport(positions2.load(0, 0, 0))
-    }
+player.onTravelled(SWIM_WATER, function () {
+    player.teleport(positions2.load(0, 0, 0))
 })
 ```
 

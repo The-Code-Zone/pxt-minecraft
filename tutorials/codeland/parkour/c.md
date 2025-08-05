@@ -50,14 +50,12 @@ function setup_player () {
     mobs.clearEffect(mobs.target(LOCAL_PLAYER))
     mobs.applyEffect(SPEED, mobs.target(NEAREST_PLAYER), 600, 2)
 }
-loops.forever(function () {
-    if (blocks.testForBlock(WATER, pos(0, 0, 0))) {
-        player.teleport(positions2.load(0, 0, 0))
-    }
+player.onTravelled(SWIM_WATER, function () {
+    player.teleport(positions2.load(0, 0, 0))
 })
 function place_stone () {
     for (let index = 0; index < randint(1, 2); index++) {
-        blocks.place(COBBLESTONE, positions2.load(x, 1, z))
+        blocks.place(COBBLESTONE, positions2.load(x, 0, z))
         z += 1
     }
 }
