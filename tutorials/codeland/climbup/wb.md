@@ -7,14 +7,8 @@
 
 
 ```template
-let finish_line = 0
-let spawn_pos: Position = null
-let y = 0
-
 function setup () {
     positions2.save(world(64, 69, -26))
-    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
     positions2.load(-10, -20, -10),
@@ -27,12 +21,13 @@ function setup () {
     positions2.load(9, 0, 9),
     FillOperation.Replace
     )
+    positions2.change(Axis.Y, -19)
 }
 
 function play_loop () {
-    y = -19
-    while (y < 0) {
-        y += 1
+    for (let index = 0; index < 19; index++) {
+        for (let index = 0; index < 40; index++) {}
+        positions2.change(Axis.Y, 1)
     }
     blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }
@@ -48,8 +43,6 @@ player.onChat("c", function () {
 ```blocks
 function setup () {
     positions2.save(world(64, 69, -26))
-    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
     positions2.load(-10, -20, -10),
@@ -62,8 +55,9 @@ function setup () {
     positions2.load(9, 0, 9),
     FillOperation.Replace
     )
+    positions2.save(positions2.load(0, -19, 0))
     // @highlight
-    player.teleport(spawn_pos)
+    player.teleport(positions2.load(-9, 0, -9))
 }
 ```
 
@@ -92,17 +86,15 @@ Find this script and ``||mobs:give the player a speed buff||`` when the game sta
 
 ```blocks
 function play_loop () {
-    y = -19
-    while (y < 0) {
-        // @highlight
+    for (let index = 0; index < 19; index++) {
         for (let index = 0; index < 40; index++) {
             // @highlight
             blocks.place(STONE, randpos(
-            positions2.load(-9, y, -9),
-            positions2.load(9, y, 9)
+            positions2.load(-9, 0, -9),
+            positions2.load(9, 0, 9)
             ))
         }
-        y += 1
+        positions2.save(positions2.load(0, 1, 0))
     }
     blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }

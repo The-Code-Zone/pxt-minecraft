@@ -13,8 +13,6 @@ let y = 0
 
 function setup () {
     positions2.save(posCamera(0, 0, 0))
-    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
     positions2.load(-10, -20, -10),
@@ -27,19 +25,19 @@ function setup () {
     positions2.load(9, 0, 9),
     FillOperation.Replace
     )
-    player.teleport(spawn_pos)
+    positions2.change(Axis.Y, -19)
+    player.teleport(positions2.load(-9, 0, -9))
 }
 
 function play_loop () {
-    y = -19
-    while (y < 0) {
+    for (let index = 0; index < 19; index++) {
         for (let index = 0; index < 40; index++) {
             blocks.place(STONE, randpos(
-            positions2.load(-9, y, -9),
-            positions2.load(9, y, 9)
+            positions2.load(-9, 0, -9),
+            positions2.load(9, 0, 9)
             ))
         }
-        y += 1
+        positions2.change(Axis.Y, 1)
     }
     blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }

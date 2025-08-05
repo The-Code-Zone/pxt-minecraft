@@ -10,7 +10,6 @@
 function setup () {}
 
 function play_loop () {
-    y = -19
     blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }
 
@@ -21,26 +20,9 @@ player.onChat("c", function () {
 
 ## Step 1
 
-let finish_line = 0
-let spawn_pos: Position = null
-let y = 0
-
-
-
-Create the following ``||variables:variables||``:
-- finish_line
-- spawn_pos
-- y
-
-You don't need to set them to anything yet!
-
-## Step 2
-
 ```blocks
 function setup () {
     positions2.save(world(64, 69, -26))
-    finish_line = positions2.load(0, 0, 0).getValue(Axis.Y)
-    spawn_pos = positions2.load(-9, -19, -9)
     blocks.fill(
     STONE,
     positions2.load(-10, -20, -10),
@@ -53,7 +35,8 @@ function setup () {
     positions2.load(9, 0, 9),
     FillOperation.Replace
     )
-    player.teleport(spawn_pos)
+    positions2.change(Axis.Y, -19)
+    player.teleport(positions2.load(-9, 0, -9))
 }
 ```
 
@@ -63,24 +46,20 @@ Find the ``||functions:empty setup() function||`` and build this script.
 
 ```blocks
 function play_loop () {
-    y = -19
-    // @highlight
-    while (y < 0) {
+    for (let index = 0; index < 19; index++) {
         for (let index = 0; index < 40; index++) {
             blocks.place(STONE, randpos(
-            positions2.load(-9, y, -9),
-            positions2.load(9, y, 9)
+            positions2.load(-9, 0, -9),
+            positions2.load(9, 0, 9)
             ))
         }
-        y += 1
+        positions2.change(Axis.Y, 1)
     }
     blocks.place(GOLD_BLOCK, positions2.load(0, 0, 0))
 }
 ```
 
 Find this script and add the code in yellow.
-
-Don't forget the code inside the ``||loops:while loop||``.
 
 ## Step 4
 
