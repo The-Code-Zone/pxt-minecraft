@@ -9,12 +9,34 @@
 let target_x = 0
 let target_y = 0
 let target_z = 0
+while (true) {
+    mobs.execute(
+    mobs.entitiesByType(ARROW_PROJECTILE_MOB),
+    pos(0, 0, 0),
+    "fill ~-2 ~-2 ~-2 ~2 ~2 ~2 gold_block replace lit_redstone_lamp"
+    )
+}
 ```
 
 ```template
 player.onChat("a", function () {
     positions2.save(posCamera(0, 0, 0))
+    base()
 })
+function base () {
+    blocks.fill(
+    STONE_BRICKS,
+    positions2.load(0, -1, 0),
+    positions2.load(30, -1, 30),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    AIR,
+    positions2.load(0, 0, 0),
+    positions2.load(30, 6, 30),
+    FillOperation.Replace
+    )
+}
 ```
 
 ## Step 1
@@ -45,6 +67,12 @@ Build this ``||functions:script||``.
 
 ```blocks
 function powered_rails () {
+    blocks.fill(
+    POWERED_RAIL,
+    positions2.load(0, 0, 0),
+    positions2.load(30, 0, 30),
+    FillOperation.Replace
+    )
     shapes.line(
     POWERED_RAIL,
     positions2.load(0, 0, 0),
@@ -52,18 +80,8 @@ function powered_rails () {
     )
     shapes.line(
     POWERED_RAIL,
-    positions2.load(0, 0, 30),
-    positions2.load(30, 0, 30)
-    )
-    shapes.line(
-    POWERED_RAIL,
     positions2.load(30, 0, 30),
     positions2.load(30, 0, 0)
-    )
-    shapes.line(
-    POWERED_RAIL,
-    positions2.load(30, 0, 0),
-    positions2.load(0, 0, 0)
     )
     blocks.fill(
     REDSTONE_TORCH,
@@ -115,6 +133,9 @@ Build this ``||functions:script||``.
 
 ```blocks
 // @hide
+function base() {}
+
+// @hide
 function powered_rails() {}
 
 // @hide
@@ -128,6 +149,7 @@ function items() {}
 
 player.onChat("a", function () {
     positions2.save(posCamera(0, 0, 0))
+    base()
     // @highlight
     powered_rails()
     // @highlight
