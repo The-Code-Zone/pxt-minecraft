@@ -1,6 +1,5 @@
 ### @explicitHints true
 
-### @diffs true
 
 # Pig Fishing
 

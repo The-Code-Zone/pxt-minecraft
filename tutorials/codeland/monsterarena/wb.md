@@ -1,6 +1,5 @@
 ### @explicitHints true
 
-### @diffs true
 
 # Monster Arena
 
