@@ -21,6 +21,14 @@ mobs.onMobKilled(mobs.monster(ZOMBIE), function () {
         setup_wave()
     }
 })
+entities.onPlayerRespawned(function () {
+    gameplay.timeSet(gameplay.time(DAY))
+    gameplay.setGameMode(
+    CREATIVE,
+    mobs.target(ALL_PLAYERS)
+    )
+    gameplay.title(mobs.target(ALL_PLAYERS), "Game Over", "You reached Wave " + wave + "!")
+})
 ```
 
 ## Step 1
@@ -74,6 +82,7 @@ function setup_player () {
     ADVENTURE,
     mobs.target(ALL_PLAYERS)
     )
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
     positions2.load(0, 0, 0)

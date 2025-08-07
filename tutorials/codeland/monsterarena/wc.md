@@ -55,6 +55,7 @@ function setup_player () {
     positions2.load(2, 3, 2),
     FillOperation.Replace
     )
+    entities.spawnpoint(mobs.target(ALL_PLAYERS))
     mobs.teleportToPosition(
     mobs.target(ALL_PLAYERS),
     positions2.load(0, 0, 0)
@@ -118,7 +119,14 @@ mobs.onMobKilled(mobs.monster(ZOMBIE), function () {
         setup_wave()
     }
 })
-
+entities.onPlayerRespawned(function () {
+    gameplay.timeSet(gameplay.time(DAY))
+    gameplay.setGameMode(
+    CREATIVE,
+    mobs.target(ALL_PLAYERS)
+    )
+    gameplay.title(mobs.target(ALL_PLAYERS), "Game Over", "You reached Wave " + wave + "!")
+})
 ```
 
 ## Try it!
